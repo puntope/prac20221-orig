@@ -22,8 +22,9 @@ El directori 📂 `app`conté el fitxers del servidor web `nodejs + express`. Aq
 
 ## 📂 Archivos para la práctica
 
-En este proyecto encontrará la estructura y archivos necesarios para empezar con la práctica.
+En este proyecto encontraréis la estructura y archivos necesarios para empezar con la práctica.
 
-El directorio 📂 `app` contiene los archivos del servidor web `nodeos + express`. Este directorio 🖐 NO debe modificarse.
+El directorio 📂 `app` contiene los archivos del servidor web `nodejs + express`. Este directorio 🖐 NO debe modificarse.
 
 👉 Hay que añadir los archivos necesarios a 📁 `reverse-proxy` para configurar el reverse proxy y modificar los diferentes `Dockerfile` correspondientes y el archivo `docker-compose` en función de cada uno de los ejercicios.
+
