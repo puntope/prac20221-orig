@@ -16,7 +16,9 @@ const getDBDate = async (req, res) => {
   await client
     .query("SELECT NOW()")
     .then((payload) => {
-      res.status(200).json(payload.rows?.[0]);
+      const dbRow = payload.rows?.[0] ?? {}
+      const result = {...dbRow, user: process.env.POSTGRES_USER}
+      res.status(200).json(result);
     })
     .catch(() => {
       res.sendStatus(404)

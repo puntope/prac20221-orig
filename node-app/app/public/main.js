@@ -4,14 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("/api")
     .then(resp => resp.json())
     .then( json => {
-        dbResponse = json?.now
-        $("#response").append(dbResponse)
-        $("#success_response").style.display = 'block'
-        $("#error_response").style.display = 'none'
+        dbResponse = `<ul class='p-4'><li><span class='text-white pr-2'>👤</span>${json?.user} </li><li><span class='text-white'>📅 </span> ${json?.now}</li></ul>`
+        $("#response").innerHTML = dbResponse
+        $('#success_response').classList.remove('hidden')
+
     }).catch( (e) => {
         console.log(e)
-        $("#error_response").style.display = 'block'
-        $("#success_response").style.display = 'none'
+        $('#error_response').classList.remove('hidden')
     })
     
 })
